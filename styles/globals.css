@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+h1 {
+  @apply text-3xl mb-4 font-sans;
+}
+h2 {
+  @apply text-2xl mb-4 font-sans font-bold;
+}
+h3 {
+  @apply text-xl mb-4 font-sans text-primaryAccent;
+}
+h4 {
+  @apply text-lg mb-4 font-sans;
+}
+h5 {
+  @apply text-base mb-4 font-bold font-sans;
+}
+h6 {
+  @apply mb-4 font-sans italic;
+}
+p {
+  @apply mb-4 font-sans font-thin;
+}
+a {
+  @apply text-primaryLight hover:text-primaryAccent;
+}
+button {
+  @apply mx-auto px-6 py-2 bg-primaryAccent hover:bg-secondaryDark text-white rounded-lg;
+}
+
+}
+
+.site-container {
+@apply container px-4 mx-auto;
+
+}
+
+.theme-dark {
+@apply bg-primaryDark text-white;
+}
+
+.theme-dark-2 {
+@apply bg-secondaryDark text-white;
+}
+
+.theme-light {
+@apply bg-primaryLight text-black;
+}
+
+
