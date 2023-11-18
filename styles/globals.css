@@ -34,6 +34,10 @@ button {
 
 }
 
+.btn-carousel {
+  @apply bg-tertiaryAccent hover:bg-secondaryDark text-white border border-tertiaryAccent rounded-lg px-2 py-4 capitalize
+}
+
 .site-container {
 @apply container px-4 mx-auto;
 
@@ -65,13 +69,13 @@ button {
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
+  @apply bg-orange-600;
   content: '';
   position: absolute;
   width: 24px;
   height: 3px;
   top: 0;
   left: 0;
-  background: #9c9aa6;
   transform: rotate(0);
   transition: all 0.5s;
 }
