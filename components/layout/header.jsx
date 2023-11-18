@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getDefaultContent } from "./header.content";
 import Link from "next/link";
+import Image from "next/image";
 
 function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ function Header(props) {
     navigation = props.navigation;
   }
 
-  let logoImage = "/images/newlogo.svg";
+  let logoImage = "/images/logo.svg";
   if (props?.settings?.logoimage) {
     logoImage = props.settings.logoimage;
   }
@@ -28,16 +29,11 @@ function Header(props) {
   };
 
   return (
-    <header className="container mx-auto p-8 md:pt-4">
+    <header className="site-container p-8 md:pt-4">
       <div className="flex gap-4 max-md:flex-wrap">
         <div className="flex flex-row space-y-6 space-x-40">
           {/* Logo Image */}
-          <img
-            loading="lazy"
-            src="/images/logo.svg"
-            className="pl-4 w-60 items-center"
-            alt="Image"
-          />
+          <Image src={logoImage} alt="Logo" width={200} height={200} />
           {/*  Hamburger Button */}
           <button
             id="menu-btn"
