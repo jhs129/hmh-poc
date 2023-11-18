@@ -88,7 +88,7 @@ function Header(props) {
             {/* Mobile Navigation */}
             <div
               id="mobile-nav"
-              className="flex flex-col mx-auto items-start p-4 text-center md:hidden"
+              className="hidden flex-col mx-auto items-start p-4 text-center md:hidden"
             >
               {navigation.navigation.map((item, index) => (
                 <Link
