@@ -39,7 +39,7 @@ button {
 }
 
 .site-container {
-@apply container px-4 mx-auto;
+@apply container mx-auto;
 
 }
 

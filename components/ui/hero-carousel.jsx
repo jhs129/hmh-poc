@@ -41,7 +41,7 @@ function HeroCarousel(props) {
   };
 
   return (
-    <section className="site-container flex-col overflow-hidden relative flex min-h-[400px] pl-16 pr-20 max-md:px-5">
+    <section id="hero-carousel" className="site-container flex-col overflow-hidden relative flex md:min-h-[380px] pl-16 pr-20 max-md:px-5">
       <img
         loading="lazy"
         src={slides[currentSlide].src}
