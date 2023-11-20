@@ -15,7 +15,7 @@ function ProviderSearchForm(props) {
 
               <input
                 type="submit"
-                className="rounded-lg bg-tertiaryAccent text-white py-2 px-4"
+                className="rounded-lg bg-tertiaryAccent text-white text-base py-2 px-4"
                 value={props.title || "Search Doctors"}
               />
           </form>
