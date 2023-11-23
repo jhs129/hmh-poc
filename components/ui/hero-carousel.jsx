@@ -41,18 +41,19 @@ function HeroCarousel(props) {
   };
 
   return (
-    <section id="hero-carousel" className="site-container flex-col overflow-hidden relative flex md:min-h-[380px] px-4 max-md:px-5">
+    <section id="hero-carousel" className="site-container flex flex-col overflow-hidden relative md:min-h-[380px] lg:px-4">
+
+
+      <div className="flex flex-col">
       <img
         loading="lazy"
         src={slides[currentSlide].src}
-        className="absolute z-[-1] h-96 w-full object-cover object-center inset-0"
+        className="absolute z-[-1] h-full w-full mx-auto lg:h-96 object-cover object-center lg:inset-0"
         alt={slides[currentSlide].alt}
       />
-
-      <div className="flex flex-col">
         {/* top containier */}
         <div className="flex flex-row justify-between">
-            <div id="previous-slide" className="mt-16">
+            <div id="previous-slide" className="mt-8 lg:mt-16">
             <div onClick={goToPrevSlide} className="mr-2 opacity-40">
               <svg
                 width="100px"
@@ -86,7 +87,7 @@ function HeroCarousel(props) {
               {slides[currentSlide].buttonText}
             </a>
           </div>
-          <div id="next-slide" className="mt-16">
+          <div id="next-slide" className="mt-8 lg:mt-16">
             <div onClick={goToNextSlide} className="ml-2 opacity-40">
               <svg
                 width="100px"
