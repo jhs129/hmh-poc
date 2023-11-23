@@ -20,7 +20,21 @@ h5 {
   @apply text-base mb-4 font-bold font-sans;
 }
 h6 {
-  @apply mb-4 font-sans italic;
+  @apply mb-4 font-sans;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-style: inherit;
+    vertical-align: baseline;
+    line-height: 1.25em;
+    font-weight: 700;
+    font-family: UniversBold,Helvetica,sans-serif;
+    font-size: 12px;
+    border-bottom: none!important;
+    color: #002072;
+    margin-bottom: .5rem;
+
 }
 p {
   @apply mb-4 font-sans font-thin;
