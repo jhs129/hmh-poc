@@ -72,13 +72,14 @@ function HeroCarousel(props) {
           </div>
           {/* text overlay and button */}
           <div className="text-white w-80 h-96 md:w-4/6 lg:w-3/4">
-            <div className="flex flex-col pb-4">
-            <h1 className="mt-28 text-white text-4xl leading-10 md:w-full max-w-full ">
+            <div className="flex flex-col h-80 py-16 pb-4">
+            <h1 className="text-white text-4xl leading-10 md:w-full max-w-full ">
               {slides[currentSlide].headline}
             </h1>
             {slides[currentSlide].subhead && (
               <p className="text-xl pb-8">{slides[currentSlide].subhead}</p>
             )}
+            
             </div>
             <a
               href={slides[currentSlide].buttonUrl}

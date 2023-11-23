@@ -58,8 +58,9 @@ function Header(props) {
             <form className="border flex w-[400px] max-w-full items-stretch gap-0 p-px border-solid border-orange-600 text-white">
               <input
                 type="text"
-                className="bg-white flex w-[338px] shrink-0 h-[35px] flex-col"
+                className="bg-white flex w-[338px] shrink-0 h-[35px] flex-col placeholder-orange-600 p-2"
                 aria-label="Search"
+                placeholder="Search Our Network"
               />
               <input
                 type="button"
@@ -68,7 +69,7 @@ function Header(props) {
               />
             </form>
           </div>
-          {/* Navigatoin */}
+          {/* Navigation */}
           <nav>
             {/* Desktop Navigation */}
             <div
