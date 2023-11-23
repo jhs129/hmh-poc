@@ -53,8 +53,8 @@ function HeroCarousel(props) {
       />
         {/* top containier */}
         <div className="flex flex-row justify-between">
-            <div id="previous-slide" className="mt-8 lg:mt-16">
-            <div onClick={goToPrevSlide} className="mr-2 opacity-40">
+            <div id="previous-slide" className="mt-28 md:mt-16">
+            <div onClick={goToPrevSlide} className="-mr-12 md:mr-2 opacity-40">
               <svg
                 width="100px"
                 height="200px"
@@ -71,9 +71,9 @@ function HeroCarousel(props) {
             </div>
           </div>
           {/* text overlay and button */}
-          <div className="text-white w-3/4">
-            <div className="pb-4">
-            <h1 className="relative text-white text-4xl leading-10 w-[492px] max-w-full mt-28 max-md:mt-10">
+          <div className="text-white w-80 h-96 md:w-4/6 lg:w-3/4">
+            <div className="flex flex-col pb-4">
+            <h1 className="mt-28 text-white text-4xl leading-10 md:w-full max-w-full ">
               {slides[currentSlide].headline}
             </h1>
             {slides[currentSlide].subhead && (
@@ -82,13 +82,13 @@ function HeroCarousel(props) {
             </div>
             <a
               href={slides[currentSlide].buttonUrl}
-              className="relative text-white text-center text-base leading-6 capitalize whitespace-nowrap rounded border bg-cyan-500 bg-opacity-70 w-[124px] max-w-full items-center mt-14 mb- px-5 py-5 border-solid border-sky-400 max-md:my-10"
+              className="mt-14 px-5 py-5 text-white text-center text-base items-center  border bg-cyan-500 bg-opacity-60 max-w-full   border-solid border-sky-400 rounded"
             >
               {slides[currentSlide].buttonText}
             </a>
           </div>
-          <div id="next-slide" className="mt-8 lg:mt-16">
-            <div onClick={goToNextSlide} className="ml-2 opacity-40">
+          <div id="next-slide" className="mt-28 md:mt-16">
+            <div onClick={goToNextSlide} className="-ml-12 md:ml-2 opacity-40">
               <svg
                 width="100px"
                 height="200px"
@@ -106,15 +106,15 @@ function HeroCarousel(props) {
           </div>
         </div>
         {/* dot navigation */}
-        <div className="flex justify-center">
+        <div id="nav-buttons" className="flex justify-center mb-4 md:-mt-16">
           {slides.map((slide, index) => (
-            <button
+            <div
               key={index}
               onClick={() => goToSlide(index)}
-              className={`mx-2 mt-4 h-12 rounded-full bg-tertiaryAccent ${
+              className={`mx-2 mt-4 h-8 w-8 rounded-full bg-tertiaryAccent ${
                 index === currentSlide ? "bg-gray-400" : ""
               }`}
-            ></button>
+            ></div>
           ))}
         </div>
       </div>
