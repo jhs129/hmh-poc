@@ -1,26 +1,14 @@
 import { useState } from "react";
+import { getDefaultContent } from "./hero-carousel.content";
 
 function HeroCarousel(props) {
-  const slides = [
-    {
-      headline:
-        "Knowing Where to Go for Cancer Treatment Makes all the Difference",
-      subhead: "",
-      src: "/images/hero1.png",
-      alt: "Cancer Treatment",
-      buttonText: "Learn More",
-      buttonUrl: "/cancer-treatment",
-    },
-    {
-      headline: "Schedule an Appointment",
-      subhead:
-        "Learn about our 9,500 providers. Call, book online or schedule a virtual visit",
-      src: "/images/hero2.jpeg",
-      alt: "Slide 2",
-      buttonText: "Schedule Now",
-      buttonUrl: "/scheduling",
-    },
-  ];
+
+  let slides;
+  if (!props.content) {
+    slides = getDefaultContent();
+  } else {
+    slides = props.content;
+  }
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -94,7 +82,7 @@ function HeroCarousel(props) {
                 width="100px"
                 height="200px"
                 viewBox="0 0 1024 1024"
-                class="icon"
+                className="icon"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
               >
