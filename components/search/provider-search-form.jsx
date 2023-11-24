@@ -9,7 +9,7 @@ function ProviderSearchForm(props) {
 >
               <input
                 type="text"
-                class="flex-1 border-1 bg-white border-white w-full md:w-2/3 pt-3 pb-2 focus:outline-none md:mr-3 md:mb-0 placeholder:px-4"
+                className="flex-1 border-1 bg-white border-white w-full md:w-2/3 pt-3 pb-2 focus:outline-none md:mr-3 md:mb-0 placeholder:px-4"
                 placeholder={props.placeholder || "Search by Doctor, Condition or Specialty..."}
               />
 

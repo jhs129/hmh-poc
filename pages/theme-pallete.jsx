@@ -16,14 +16,14 @@ export default function Home() {
           <p><button>Button</button></p>
         </div>
 
-        <div class="mt-16"><h3>Website Colors</h3></div>
+        <div className="mt-16"><h3>Website Colors</h3></div>
         <div id="color-grid" className="grid gap-6 grid-cols-1 md:grid-cols-3 md:rows-2">
-        <div class="bg-primaryAccent mx-auto w-60 p-8  border-gray-400 border-2 text-center">Primary Accent</div>
-          <div class="bg-secondaryAccent mx-auto w-60 p-8 border-gray-400 border-2 text-center">Secondary Accent</div>
-          <div class="bg-primaryDark mx-auto w-60 p-8 text-white border-gray-400 border-2 text-center">Primary Dark</div>
-          <div class="bg-secondaryDark mx-auto w-60 p-8 text-white border-gray-400 border-2 text-center">Secondary Dark</div>
-          <div class="bg-primaryLight mx-auto w-60 p-8 text-primaryDark border-gray-400 border-2 text-center">Primary Light</div>
-          <div class="bg-secondaryLight mx-auto w-60 p-8 text-primaryDark border-gray-400 border-2 text-center">Secondary Light</div> 
+        <div className="bg-primaryAccent mx-auto w-60 p-8  border-gray-400 border-2 text-center">Primary Accent</div>
+          <div className="bg-secondaryAccent mx-auto w-60 p-8 border-gray-400 border-2 text-center">Secondary Accent</div>
+          <div className="bg-primaryDark mx-auto w-60 p-8 text-white border-gray-400 border-2 text-center">Primary Dark</div>
+          <div className="bg-secondaryDark mx-auto w-60 p-8 text-white border-gray-400 border-2 text-center">Secondary Dark</div>
+          <div className="bg-primaryLight mx-auto w-60 p-8 text-primaryDark border-gray-400 border-2 text-center">Primary Light</div>
+          <div className="bg-secondaryLight mx-auto w-60 p-8 text-primaryDark border-gray-400 border-2 text-center">Secondary Light</div> 
         </div>
       </div>
     </main>
