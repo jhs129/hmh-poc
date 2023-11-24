@@ -79,10 +79,11 @@ function Footer(props) {
       </div>
 
       <div id="copyright" className="mt-4 text-xs text-secondaryDark">
-        © 2023 Hackensack Meridian <em>Health</em>, Inc. is a nonprofit,
+        {props?.siteProperties?.copyright ? props.siteProperties.copyright :
+        `© 2023 Hackensack Meridian <em>Health</em>, Inc. is a nonprofit,
         tax-exempt charitable organization (tax ID 22-3474145) under Section
         501(c)(3) of the Internal Revenue Code. Donations are tax-deductible as
-        allowed by law.
+        allowed by law.`}
       </div>
     </footer>
   );
