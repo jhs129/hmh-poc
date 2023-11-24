@@ -5,6 +5,12 @@ import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import "../builder-registry";
 
+import Header from "@/components/layout/header";
+import HeroCarousel from "@/components/ui/hero-carousel";
+import ProviderSearchForm from "@/components/search/provider-search-form";
+import Footer from "@/components/layout/footer";
+
+
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 // Define a function that fetches the Builder
@@ -19,10 +25,31 @@ export const getStaticProps = async ({ params }) => {
     })
     .toPromise();
 
+    const headerContent = await builder
+    .get("navigation", { query: { name: "header-navigation" }, enrich: true })
+    .promise();
+
+    const footerContent = await builder
+    .get("navigation", { query: { name: "footer-navigation" }, enrich: true })
+    .promise();
+
+    const socialLinks = await builder
+    .get("social-links", { query: { name: "hmh-social-links" }, enrich: true })
+    .promise();
+
+
+    const siteProperties = await builder
+    .get("site-properties", { query: { name: "site-properties" }, enrich: true })
+    .promise();
+
   // Return the page content as props
   return {
     props: {
       page: page || null,
+      header: headerContent.data || null,
+      footer: footerContent.data || null,
+      socialLinks: socialLinks.data || null,
+      settings: siteProperties.data || null,
     },
     // Revalidate the content every 5 seconds
     revalidate: 5,
@@ -49,13 +76,13 @@ export async function getStaticPaths() {
 }
 
 // Define the Page component
-export default function Page({ page }) {
+export default function Page(props) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
   // If the page content is not available
   // and not in preview mode, show a 404 error page
-  if (!page && !isPreviewing) {
+  if (!props.page && !isPreviewing) {
     return <DefaultErrorPage statusCode={404} />;
   }
 
@@ -64,10 +91,17 @@ export default function Page({ page }) {
   return (
     <>
       <Head>
-        <title>{page?.data?.title}</title>
+        <title>{props.page?.data?.title}</title>
       </Head>
+
+      <Header navigation={props.header} logo={props.settings.logo}/>
+      <main>
       {/* Render the Builder page */}
-      <BuilderComponent model="page" content={page || undefined} />
+      <div className="site-container">
+      <BuilderComponent model="page" content={props.page || undefined} />
+      </div>
+      </main>
+      <Footer navigation={props.footer} socialLinks={props.socialLinks} copyright={props.settings.copyright} />
     </>
   );
 }
