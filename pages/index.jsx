@@ -16,7 +16,7 @@ export default function Home(props) {
         <HeroCarousel />
         <ProviderSearchForm />
       </main>
-      <Footer />
+        <Footer navigation={props.footer} socialLinks={props.socialLinks} copyright={props.settings.copyright} />
     </>
   );
 }
@@ -33,16 +33,21 @@ export const getStaticProps = async ({ params }) => {
     .get("navigation", { query: { name: "footer-navigation" }, enrich: true })
     .promise();
 
+    const socialLinks = await builder
+    .get("social-links", { query: { name: "hmh-social-links" }, enrich: true })
+    .promise();
+
+
     const siteProperties = await builder
     .get("site-properties", { query: { name: "site-properties" }, enrich: true })
     .promise();
-    console.log("siteProperties", siteProperties.data);
 
   // Return the page content as props
   return {
     props: {
-      header: headerContent || null,
-      footer: footerContent || null,
+      header: headerContent.data || null,
+      footer: footerContent.data || null,
+      socialLinks: socialLinks.data || null,
       settings: siteProperties.data || null,
     },
     // Revalidate the content every 5 seconds

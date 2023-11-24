@@ -88,7 +88,7 @@ function Header(props) {
               id="desktop-nav"
               className="hidden md:flex self-stretch items-end justify-between gap-5 mt-3 max-md:max-w-full max-md:flex-wrap max-md:justify-center "
             >
-              {navigation.data.group[0].level1.map((item, index) => (
+              {navigation.group[0].level1.map((item, index) => (
                 <Link
                   key={index}
                   href={item.src}
@@ -105,7 +105,7 @@ function Header(props) {
               id="mobile-nav"
               className="hidden flex-col mx-auto items-start p-4 text-center md:hidden"
             >
-              {navigation.data.group[0].level1.map((item, index) => (
+              {navigation.group[0].level1.map((item, index) => (
                 <Link
                   key={index}
                   href={item.src}
