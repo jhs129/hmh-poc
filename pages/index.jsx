@@ -45,10 +45,10 @@ export const getStaticProps = async ({ params }) => {
   // Return the page content as props
   return {
     props: {
-      header: headerContent.data || null,
-      footer: footerContent.data || null,
-      socialLinks: socialLinks.data || null,
-      settings: siteProperties.data || null,
+      header: headerContent?.data || null,
+      footer: footerContent?.data || null,
+      socialLinks: socialLinks?.data || null,
+      settings: siteProperties?.data || null,
     },
     // Revalidate the content every 5 seconds
     revalidate: 5,
