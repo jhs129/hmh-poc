@@ -11,12 +11,12 @@ builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 export default function Home(props) {
   return (
     <>
-      <Header navigation={props.header} logo={props.settings.logo}/>
+      <Header navigation={props.header || undefined} logo={props?.settings?.logo || undefined}/>
       <main>
         <HeroCarousel />
         <ProviderSearchForm />
       </main>
-        <Footer navigation={props.footer} socialLinks={props.socialLinks} copyright={props.settings.copyright} />
+        <Footer navigation={props?.footer || undefined} socialLinks={props?.socialLinks || undefined} copyright={props?.settings?.copyright || undefined} />
     </>
   );
 }
