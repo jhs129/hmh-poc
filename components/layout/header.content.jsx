@@ -1,34 +1,56 @@
 const content = {
-  lastUpdatedBy: "YKRZYQ4lx5hVipxOABWD0DaLFRZ2",
-  folders: [],
-  data: {
-    navigation: [
-      { link: { href: "#", text: "Find a Doctor" } },
-      { link: { href: "#", text: "Find a Location" } },
-      { link: { href: "#", text: "Services" } },
-      { link: { href: "#", text: "MyChart" } },
-      { link: { href: "#", text: "Pay Bill" } },
-      { link: { href: "#", text: "Donate" } },
-      { link: { href: "tel:1-844-HMH-WELL", text: "1-844-HMH-WELL" } },
-    ],
-  },
-  modelId: "ad990ebcee98467fb25a8097c94f8f06",
-  query: [],
-  published: "published",
-  firstPublished: 1698350624577,
-  testRatio: 1,
-  lastUpdated: 1698350624603,
-  createdDate: 1698350304761,
-  createdBy: "YKRZYQ4lx5hVipxOABWD0DaLFRZ2",
-  meta: {
-    kind: "data",
-    lastPreviewUrl: "",
-  },
-  variations: {},
-  name: "main-navigation",
-  id: "0a29b4b30d0c4e508cea87b47ccc6cb2",
-  rev: "hp0zwwtssg",
-};
+      "lastUpdatedBy": "YKRZYQ4lx5hVipxOABWD0DaLFRZ2",
+      "folders": [],
+      "data": {
+        "group": [
+          {
+            "level1": [
+              {
+                "src": "/search/doctors",
+                "text": "Find a Doctor"
+              },
+              {
+                "src": "/search/locations",
+                "text": "Find a Location"
+              },
+              {
+                "src": "/services",
+                "text": "Services"
+              },
+              {
+                "src": "/billpay",
+                "text": "Pay Bill"
+              },
+              {
+                "src": "/donate",
+                "text": "Donate"
+              },
+              {
+                "src": "/contact",
+                "text": "1-844-HMH-WELL"
+              }
+            ]
+          }
+        ]
+      },
+      "modelId": "e8de6bac5f8842bd95d4d4919b02842e",
+      "query": [],
+      "published": "published",
+      "firstPublished": 1700827256116,
+      "testRatio": 1,
+      "lastUpdated": 1700827256124,
+      "createdDate": 1700827070840,
+      "createdBy": "YKRZYQ4lx5hVipxOABWD0DaLFRZ2",
+      "meta": {
+        "kind": "data",
+        "lastPreviewUrl": ""
+      },
+      "variations": {},
+      "name": "header-navigation",
+      "id": "58a43fd23a714f499d48b5a970ba79e8",
+      "rev": "zmjg3qdgiwd"
+    }
+
 
 export function getDefaultContent() {
   return content.data;

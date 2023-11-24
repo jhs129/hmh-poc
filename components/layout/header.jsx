@@ -14,8 +14,9 @@ function Header(props) {
   }
 
   let logoImage = "/images/logo.svg";
-  if (props?.settings?.logoimage) {
-    logoImage = props.settings.logoimage;
+  if (props?.logo) {
+    logoImage = props.logo;
+    console.log("logoImage", logoImage);
   }
 
   const toggleOpen = () => {
@@ -50,9 +51,9 @@ function Header(props) {
                 toggleMenu();
               }}
             >
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
+              <span className="hamburger-top"></span>
+              <span className="hamburger-middle"></span>
+              <span className="hamburger-bottom"></span>
             </button>
           </div>
         </div>
@@ -87,13 +88,13 @@ function Header(props) {
               id="desktop-nav"
               className="hidden md:flex self-stretch items-end justify-between gap-5 mt-3 max-md:max-w-full max-md:flex-wrap max-md:justify-center "
             >
-              {navigation.navigation.map((item, index) => (
+              {navigation.group[0].level1.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.link.href}
+                  href={item.src}
                   className="text-blue-800 text-right text-base leading-6 self-start"
                 >
-                  {item.link.text}
+                  {item.text}
                 </Link>
               ))}
             </div>
@@ -104,13 +105,13 @@ function Header(props) {
               id="mobile-nav"
               className="hidden flex-col mx-auto items-start p-4 text-center md:hidden"
             >
-              {navigation.navigation.map((item, index) => (
+              {navigation.group[0].level1.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.link.href}
+                  href={item.src}
                   className="p-2 text-blue-800 leading-6 border-b border-b-black border-t border-t-black border-l border-l-gray-200 border-r border-r-gray-200 w-full text-left"
                 >
-                  {item.link.text}
+                  {item.text}
                 </Link>
               ))}
             </div>

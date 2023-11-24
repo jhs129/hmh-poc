@@ -7,3 +7,10 @@ Builder.registerComponent(
     name: "Hero Carousel",
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Counter/Counter")),
+  {
+    name: "Counter",
+  }
+);
