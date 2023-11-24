@@ -92,6 +92,7 @@ export default function Page(props) {
     <>
       <Head>
         <title>{props.page?.data?.title}</title>
+        <meta name="builderkey" content={process.env.NEXT_PUBLIC_BUILDER_API_KEY} />
       </Head>
 
       <Header navigation={props?.header || undefined} logo={props?.settings?.logo || undefined}/>
