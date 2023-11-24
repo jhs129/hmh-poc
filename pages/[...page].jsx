@@ -94,14 +94,14 @@ export default function Page(props) {
         <title>{props.page?.data?.title}</title>
       </Head>
 
-      <Header navigation={props.header || undefined} logo={props.settings?.logo || undefined}/>
+      <Header navigation={props?.header || undefined} logo={props?.settings?.logo || undefined}/>
       <main>
       {/* Render the Builder page */}
       <div className="site-container">
-      <BuilderComponent model="page" content={props.page || undefined} />
+      <BuilderComponent model="page" content={props?.page || undefined} />
       </div>
       </main>
-      <Footer navigation={props.footer} socialLinks={props.socialLinks || undefined} copyright={props.settings.copyright || undefined} />
+      <Footer navigation={props?.footer || undefined} socialLinks={props?.socialLinks || undefined} copyright={props?.settings?.copyright || undefined} />
     </>
   );
 }
