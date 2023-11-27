@@ -53,9 +53,11 @@ export default function Home(props) {
       <main>
         <HeroCarousel />
         <ProviderSearchForm />
-        <h1>Hello Builder</h1>
+      
         {/* Render the Builder page */}
+        <div className="site-container">
         <BuilderComponent model="page" content={props?.page || undefined} />
+        </div>
       </main>
       <Footer
         navigation={props?.footer || undefined}
