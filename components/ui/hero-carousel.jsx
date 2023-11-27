@@ -31,7 +31,7 @@ function HeroCarousel(props) {
   return (
     <section
       id="hero-carousel"
-      className="site-container flex flex-col overflow-hidden relative md:min-h-[360px] lg:px-4"
+      className="site-container flex flex-col overflow-hidden relative lg:px-4"
     >
       <div className="flex flex-col">
         <Image
@@ -64,13 +64,13 @@ function HeroCarousel(props) {
           </div>
           {/* text overlay and button */}
           <div className="text-white w-80 md:w-4/6 lg:w-3/4">
-            <div id="foo" className="flex flex-col py-16 pb-4">
+            <div id="headline" className="flex flex-col py-16 pb-4">
               <div className="h-20">
                 <h1 className="text-primaryLight text-3xl md:text-4xl leading-10 md:w-full max-w-full ">
                   {slides[currentSlide].headline}
                 </h1>
               </div>
-              <div className="h-36">
+              <div id="subhead" className="h-36 md:h-16">
                 {slides[currentSlide].subhead && (
                   <p className="text-xl pb-8">{slides[currentSlide].subhead}</p>
                 )}
