@@ -39,7 +39,6 @@ function HeroCarousel(props) {
           alt="Hero Image"
           width={1024}
           height={400}
-          layout="responsive"
           className="absolute z-[-1] h-full w-full mx-auto lg:h-80 object-cover object-center lg:inset-0"
           loading="eager"
           priority
@@ -67,7 +66,7 @@ function HeroCarousel(props) {
           <div className="text-white w-80 md:w-4/6 lg:w-3/4">
             <div id="foo" className="flex flex-col py-16 pb-4">
               <div className="h-20">
-                <h1 className="text-primaryLight text-4xl leading-10 md:w-full max-w-full ">
+                <h1 className="text-primaryLight text-3xl md:text-4xl leading-10 md:w-full max-w-full ">
                   {slides[currentSlide].headline}
                 </h1>
               </div>
@@ -80,7 +79,7 @@ function HeroCarousel(props) {
             <a
               id="hero-button"
               href={slides[currentSlide].buttonUrl}
-              className="px-5 py-5 text-primaryLight self-stretch items-center w-64 text-center text-base border bg-tertiaryAccent bg-opacity-60 border-solid border-sky-400 rounded"
+              className="px-5 py-3 md:py-5 text-primaryLight self-stretch items-center w-64 text-center text-base border bg-tertiaryAccent bg-opacity-60 border-solid border-sky-400 rounded"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -109,7 +108,7 @@ function HeroCarousel(props) {
             <div
               key={index}
               onClick={() => goToSlide(index)}
-              className={`mx-2 mt-4 h-8 w-8 rounded-full bg-tertiaryAccent ${
+              className={`mx-2 mt-6 h-6 w-6 md:h-8 md:w-8 rounded-full bg-tertiaryAccent ${
                 index === currentSlide ? "bg-secondaryDark " : ""
               }`}
             ></div>

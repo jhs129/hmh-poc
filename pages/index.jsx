@@ -50,10 +50,7 @@ export default function Home(props) {
         navigation={props.header || undefined}
         logo={props?.settings?.logo || undefined}
       />
-      <main>
-        <HeroCarousel />
-        <ProviderSearchForm />
-      
+      <main>      
         {/* Render the Builder page */}
         <div className="site-container">
         <BuilderComponent model="page" content={props?.page || undefined} />
