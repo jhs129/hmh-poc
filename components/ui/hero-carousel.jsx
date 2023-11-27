@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { getDefaultContent } from "./hero-carousel.content";
+import Image from "next/image";
 
 function HeroCarousel(props) {
-
   let slides;
-  if (!props.content) {
+  if (!props.slides) {
     slides = getDefaultContent();
   } else {
-    slides = props.content;
+    slides = props.slides;
   }
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,19 +29,24 @@ function HeroCarousel(props) {
   };
 
   return (
-    <section id="hero-carousel" className="site-container flex flex-col overflow-hidden relative md:min-h-[380px] lg:px-4">
-
-
+    <section
+      id="hero-carousel"
+      className="site-container flex flex-col overflow-hidden relative md:min-h-[360px] lg:px-4"
+    >
       <div className="flex flex-col">
-      <img
-        loading="lazy"
-        src={slides[currentSlide].src}
-        className="absolute z-[-1] h-full w-full mx-auto lg:h-96 object-cover object-center lg:inset-0"
-        alt={slides[currentSlide].alt}
-      />
+        <Image
+          src={slides[currentSlide].image}
+          alt="Hero Image"
+          width={1024}
+          height={400}
+          layout="responsive"
+          className="absolute z-[-1] h-full w-full mx-auto lg:h-80 object-cover object-center lg:inset-0"
+          loading="eager"
+          priority
+        />
         {/* top containier */}
         <div className="flex flex-row justify-between">
-            <div id="previous-slide" className="mt-28 md:mt-16">
+          <div id="previous-slide" className="mt-28 md:mt-16">
             <div onClick={goToPrevSlide} className="-mr-12 md:mr-2 opacity-40">
               <svg
                 width="100px"
@@ -59,19 +64,23 @@ function HeroCarousel(props) {
             </div>
           </div>
           {/* text overlay and button */}
-          <div className="text-white w-80 h-96 md:w-4/6 lg:w-3/4">
-            <div className="flex flex-col h-80 py-16 pb-4">
-            <h1 className="text-white text-4xl leading-10 md:w-full max-w-full ">
-              {slides[currentSlide].headline}
-            </h1>
-            {slides[currentSlide].subhead && (
-              <p className="text-xl pb-8">{slides[currentSlide].subhead}</p>
-            )}
-            
+          <div className="text-white w-80 md:w-4/6 lg:w-3/4">
+            <div id="foo" className="flex flex-col py-16 pb-4">
+              <div className="h-20">
+                <h1 className="text-primaryLight text-4xl leading-10 md:w-full max-w-full ">
+                  {slides[currentSlide].headline}
+                </h1>
+              </div>
+              <div className="h-36">
+                {slides[currentSlide].subhead && (
+                  <p className="text-xl pb-8">{slides[currentSlide].subhead}</p>
+                )}
+              </div>
             </div>
             <a
+              id="hero-button"
               href={slides[currentSlide].buttonUrl}
-              className="mt-14 px-5 py-5 text-white text-center text-base items-center  border bg-cyan-500 bg-opacity-60 max-w-full   border-solid border-sky-400 rounded"
+              className="px-5 py-5 text-primaryLight self-stretch items-center w-64 text-center text-base border bg-tertiaryAccent bg-opacity-60 border-solid border-sky-400 rounded"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -95,13 +104,13 @@ function HeroCarousel(props) {
           </div>
         </div>
         {/* dot navigation */}
-        <div id="nav-buttons" className="flex justify-center mb-4 md:-mt-16">
+        <div id="nav-buttons" className="flex justify-center mb-4 md:-mt-12">
           {slides.map((slide, index) => (
             <div
               key={index}
               onClick={() => goToSlide(index)}
               className={`mx-2 mt-4 h-8 w-8 rounded-full bg-tertiaryAccent ${
-                index === currentSlide ? "bg-gray-400" : ""
+                index === currentSlide ? "bg-secondaryDark " : ""
               }`}
             ></div>
           ))}

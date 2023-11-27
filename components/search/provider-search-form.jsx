@@ -10,13 +10,13 @@ function ProviderSearchForm(props) {
               <input
                 type="text"
                 className="flex-1 border-1 bg-white border-white w-full md:w-2/3 pt-3 pb-2 focus:outline-none md:mr-3 md:mb-0 placeholder:px-4"
-                placeholder={props.placeholder || "Search by Doctor, Condition or Specialty..."}
+                placeholder={props.placeholdeText || "Search by Doctor, Condition or Specialty..."}
               />
 
               <input
                 type="submit"
                 className="rounded-lg bg-tertiaryAccent text-white text-base py-2 px-4"
-                value={props.title || "Search Doctors"}
+                value={props.buttonLabel || "Search Doctors"}
               />
           </form>
       </div>

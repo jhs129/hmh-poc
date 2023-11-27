@@ -3,7 +3,7 @@ const content = [
       headline:
         "Knowing Where to Go for Cancer Treatment Makes all the Difference",
       subhead: "",
-      src: "/images/hero1.png",
+      image: "/images/hero1.png",
       alt: "Cancer Treatment",
       buttonText: "Learn More",
       buttonUrl: "/cancer-treatment",
@@ -12,7 +12,7 @@ const content = [
       headline: "Schedule an Appointment",
       subhead:
         "Learn about our 9,500 providers. Call, book online or schedule a virtual visit",
-      src: "/images/hero2.jpeg",
+      image: "/images/hero2.jpeg",
       alt: "Slide 2",
       buttonText: "Schedule Now",
       buttonUrl: "/scheduling",

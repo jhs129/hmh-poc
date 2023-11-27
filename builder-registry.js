@@ -5,8 +5,38 @@ Builder.registerComponent(
   dynamic(() => import("./components/ui/hero-carousel")),
   {
     name: "Hero Carousel",
+    inputs: [
+      {
+        name: "slides",
+        type: "list",
+        subFields: [
+          {
+            name: "image",
+            type: "file",
+            allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+          },
+          { name: "headline", type: "string" },
+          { name: "subhead", type: "string" },
+          { name: "buttonText", type: "string" },
+          { name: "buttonUrl", type: "url" },
+        ],
+      },
+    ],
   }
 );
+
+//  const { title, desc, icon, url, label } = props;
+Builder.registerComponent(
+  dynamic(() => import("./components/search/provider-search-form")),
+  {
+    name: "Provider Search",
+    inputs: [
+      { name: "placeholderText", label: "Placeholder Text", type: "string", defaultValue: "Search by Doctor, Condition or Specialty..." },
+      { name: "buttonLabel", label: "Button Label", type: "string", defaultValue: "Search" },
+    ],
+  },  
+);
+
 
 //  const { title, desc, icon, url, label } = props;
 Builder.registerComponent(
