@@ -16,7 +16,6 @@ function Header(props) {
   let logoImage = "/images/logo.svg";
   if (props?.logo) {
     logoImage = props.logo;
-    console.log("logoImage", logoImage);
   }
 
   const toggleOpen = () => {

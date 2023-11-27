@@ -91,14 +91,46 @@ export default function Page(props) {
   return (
     <>
       <Head>
-        <title>{props.page?.data?.title}</title>
-        <meta name="builderkey" content={process.env.NEXT_PUBLIC_BUILDER_API_KEY} />
+        <title>
+          {props?.page?.data?.title || `Hackensack Meridian Health | Home`}
+        </title>
+        <meta
+          name="description"
+          content={
+            props?.page?.data?.description ||
+            `Hackensack Meridian Health - New Jersey's largest and most comprehensive health network, with more than 450 locations and 36,000 team members.`
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            props?.page?.data?.keywords ||
+            `Healthcare New Jersy, Health Network, Health Network New Jersey, Health Network New Jersy, Health Network`
+          }
+        />
+        {/* <meta property="og:image" content="http://www.jhsdigitalconsulting.com/images/logo-blue.png" /> */}
+        <meta
+          property="og:image"
+          content={props?.page?.data?.shareImage || null}
+        />
+
+        <meta property="og:title" content={props?.page?.data?.title || null} />
+        <meta
+          property="og:description"
+          content={
+            props?.page?.data?.description ||
+            `Hackensack Meridian Health - New Jersey's largest and most comprehensive health network, with more than 450 locations and 36,000 team members.`
+          }
+        />
       </Head>
 
       <Header navigation={props?.header || undefined} logo={props?.settings?.logo || undefined}/>
       <main>
       {/* Render the Builder page */}
       <div className="site-container">
+      <HeroCarousel />
+        <ProviderSearchForm />
+
       <BuilderComponent model="page" content={props?.page || undefined} />
       </div>
       </main>
