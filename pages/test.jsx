@@ -4,6 +4,7 @@ import HeroCarousel from "@/components/ui/hero-carousel";
 import ProviderSearchForm from "@/components/search/provider-search-form";
 import Footer from "@/components/layout/footer";
 import CTACard from "@/components/ui/icon-cta";
+import PracticeCard from "@/components/ui/practice-card";
 
 export default function Home() {
   return (
@@ -13,11 +14,13 @@ export default function Home() {
 
       <HeroCarousel />
       <ProviderSearchForm />
-      <div className="site-container flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row md:justify-between">
-      
-      <CTACard title="Find a Doctor" icon="fa-user-md" desc="Search our network of expert care by doctor, condition or specialty." label="Search Doctors" url="#"/>
-      <CTACard title="Find a Location"icon="fa-map-marker" desc="Search our network by hospital, urgent care, doctor offices and more." label="Find Locations" url="#"/>
-      <CTACard title="Make an Appointment" icon="fa-calendar-check" desc="You can make an appointment online or on the phone." label="Start Here" url="#"/>
+      <div className="site-container flex flex-col flex-wrap space-y-4 mt-2 mb-2 md:space-y-0 gap-2 md:gap-6 md:flex-row justify-between">
+      <PracticeCard title="practice name long long lorem ipsum mit doler" thumbnail="/images/practices/cancer.png"/>
+      <PracticeCard title="practice name" thumbnail="/images/practices/cancer.png"/>
+      <PracticeCard title="practice name" thumbnail="/images/practices/cancer.png"/>
+      <PracticeCard title="practice name" thumbnail="/images/practices/cancer.png"/>
+      <PracticeCard title="practice name" thumbnail="/images/practices/cancer.png"/>
+      <PracticeCard title="practice name" thumbnail="/images/practices/cancer.png"/>
       </div>
     </main>
     <Footer />
