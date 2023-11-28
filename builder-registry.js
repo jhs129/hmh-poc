@@ -58,3 +58,16 @@ Builder.registerComponent(
     ],
   },  
 );
+
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ui/practice-card")),
+  {
+    name: "Practice Card",
+    inputs: [
+      { name: "name", type: "string", defaultValue: "[name]" },
+      { name: "title", type: "string", defaultValue: "[title]" },
+      { name: "thumbnail", type: "file" },
+    ],
+  },  
+);
