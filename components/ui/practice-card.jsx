@@ -4,7 +4,7 @@ import Link from "next/link";
 function PracticeCard(props) {
   const { name, title, thumbnail } = props;
   return (
-    <div className="flex md:w-80 items-stretch rounded-l-full rounded-r-full justify-between gap-4 px-2 border-4 border-solid border-gray-200">
+    <div className="flex w-full md:w-80 items-stretch rounded-l-full rounded-r-full justify-between gap-4 px-2 border-4 border-solid border-gray-200">
       <Image
         src={thumbnail}
         alt="Hero Image"
