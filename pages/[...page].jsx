@@ -128,8 +128,7 @@ export default function Page(props) {
       <main>
       {/* Render the Builder page */}
       <div className="site-container">
-      <HeroCarousel />
-        <ProviderSearchForm />
+ 
 
       <BuilderComponent model="page" content={props?.page || undefined} />
       </div>

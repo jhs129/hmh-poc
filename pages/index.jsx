@@ -53,6 +53,7 @@ export default function Home(props) {
       <main>      
         {/* Render the Builder page */}
         <div className="site-container">
+          <h1>Hello World</h1>
         <BuilderComponent model="page" content={props?.page || undefined} />
         </div>
       </main>
