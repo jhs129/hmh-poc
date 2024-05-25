@@ -50,7 +50,6 @@ export default function Home(props) {
         logo={props?.settings?.logo || undefined}
       />
       <main>      
-        {/* another test */}
         {/* Render the Builder page */}
         <div className="site-container">
         
