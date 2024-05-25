@@ -45,7 +45,6 @@ export default function Home(props) {
           }
         />
       </Head>
-{/* //<!-- Hero Carousel --> */}
       <Header
         navigation={props.header || undefined}
         logo={props?.settings?.logo || undefined}
