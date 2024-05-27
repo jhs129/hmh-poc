@@ -48,14 +48,6 @@ Builder.registerComponent(
             allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
           },
           { name: "headline", type: "string" },
-          { name: "headlineStyle", type: "text",
-          enum: [
-            { label: "Light", value: "text-primaryLight" },
-            { label: "Dark", value: "text-primaryDark" },
-            { label: "Accent", value: "text-primaryAccent" },
-
-          ]},
-          { name: "subhead", type: "string" },
           { name: "buttonText", type: "string" },
           { name: "buttonUrl", type: "url" },
         ],
