@@ -17,6 +17,44 @@ Builder.registerComponent(
             allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
           },
           { name: "headline", type: "string" },
+          { name: "headlineStyle", type: "text",
+          enum: [
+            { label: "Light", value: "text-primaryLight" },
+            { label: "Dark", value: "text-primaryDark" },
+            { label: "Accent", value: "text-primaryAccent" },
+
+          ]},
+          { name: "subhead", type: "string" },
+          { name: "buttonText", type: "string" },
+          { name: "buttonUrl", type: "url" },
+        ],
+      },
+    ],
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ui/hero-carousel2")),
+  {
+    name: "Hero Carousel 2",
+    inputs: [
+      {
+        name: "slides",
+        type: "list",
+        subFields: [
+          {
+            name: "image",
+            type: "file",
+            allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+          },
+          { name: "headline", type: "string" },
+          { name: "headlineStyle", type: "text",
+          enum: [
+            { label: "Light", value: "text-primaryLight" },
+            { label: "Dark", value: "text-primaryDark" },
+            { label: "Accent", value: "text-primaryAccent" },
+
+          ]},
           { name: "subhead", type: "string" },
           { name: "buttonText", type: "string" },
           { name: "buttonUrl", type: "url" },

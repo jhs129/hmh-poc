@@ -46,7 +46,7 @@ function HeroCarousel(props) {
         {/* top containier */}
         <div className="flex flex-row justify-between">
           <div id="previous-slide" className="mt-28 md:mt-16">
-            <div onClick={goToPrevSlide} className="-mr-12 md:mr-2 opacity-40">
+            {/* <div onClick={goToPrevSlide} className="-mr-12 md:mr-2 opacity-40">
               <svg
                 width="100px"
                 height="200px"
@@ -60,7 +60,7 @@ function HeroCarousel(props) {
                   fill="#747474"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
           {/* text overlay and button */}
           <div className="text-white w-80 md:w-4/6 lg:w-3/4">
@@ -79,13 +79,13 @@ function HeroCarousel(props) {
             <a
               id="hero-button"
               href={slides[currentSlide].buttonUrl}
-              className="px-5 py-3 md:py-5 text-primaryLight self-stretch items-center w-64 text-center text-base border bg-tertiaryAccent bg-opacity-60 border-solid border-sky-400 rounded"
+              className="px-5 py-3 md:py-5 text-primaryLight self-stretch items-center w-64 text-center text-base border bg-primaryAccent  border-solid border-sky-400 rounded-lg"
             >
               {slides[currentSlide].buttonText}
             </a>
           </div>
           <div id="next-slide" className="mt-28 md:mt-16">
-            <div onClick={goToNextSlide} className="-ml-12 md:ml-2 opacity-40">
+            {/* <div onClick={goToNextSlide} className="-ml-12 md:ml-2 opacity-40">
               <svg
                 width="100px"
                 height="200px"
@@ -99,7 +99,7 @@ function HeroCarousel(props) {
                   fill="#747474"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* dot navigation */}
