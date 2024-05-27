@@ -46,42 +46,47 @@ function HeroCarousel(props) {
         {/* top containier */}
         <div className="flex flex-row mt-8">
           {/* text overlay and button */}
-          <div className="flex flex-col gap-2 w-80 md:w-4/6 lg:w-3/4">
-            <div id="headline"
-              className="flex flex-col py-16 pb-4 bg-primaryLight opacity-80"
-            >
-              <div className="h-20">
-                <h1
-                  className={`text-primaryAccent leading-10 md:w-1/2 max-w-full`}
-                >
-                  {slides[currentSlide].headline}
-                </h1>
-              </div>
+          <div id="banner-text" className="flex flex-col gap-8 w-80 md:w-1/2">
+            <div id="headline" className="relative">
+              <h1
+                id="headline-text"
+                className="text-primaryDark text-4xl font-bold py-4 leading-10 z-20"
+              >
+                {slides[currentSlide].headline}
+              </h1>
+              <div
+                id="overlay"
+                className="absolute top-0 w-full h-full bg-white opacity-10 z-10"
+              ></div>
             </div>
-            {slides[currentSlide].buttonText && (
-              <div>
+            <div
+              id="hero-button"
+              className={`${slides[currentSlide].buttonText ? "" : "hidden"} `}
+            >
+              {slides[currentSlide].buttonText && (
                 <a
-                  id="hero-button"
                   href={slides[currentSlide].buttonUrl}
                   className="px-8 py-3 md:py-5 text-primaryLight text-center text-base bg-primaryAccent rounded-full"
                 >
                   {slides[currentSlide].buttonText}
                 </a>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
         {/* dot navigation */}
-        <div id="nav-buttons" className="flex justify-center">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`mx-2 mt-6 h-6 w-6 md:h-8 md:w-8 rounded-full bg-primaryAccent ${
-                index === currentSlide ? "bg-secondaryDark " : ""
-              }`}
-            ></div>
-          ))}
+        <div className="absolute bottom-5 w-full mx-auto">
+          <div id="nav-buttons" className="flex justify-center">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`mx-2 mt-4 h-4 w-4 md:h-4 md:w-4 rounded-full bg-primaryAccent ${
+                  index === currentSlide ? "bg-secondaryDark " : ""
+                }`}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
