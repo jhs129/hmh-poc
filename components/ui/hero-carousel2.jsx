@@ -31,7 +31,7 @@ function HeroCarousel(props) {
   return (
     <section
       id="hero-carousel"
-      className="site-container flex flex-col overflow-hidden lg:h-96 relative lg:px-4"
+      className="site-container flex flex-col overflow-hidden h-60 lg:h-96 relative lg:px-4"
     >
       <div className="flex flex-col">
         <Image
@@ -47,10 +47,10 @@ function HeroCarousel(props) {
         <div className="flex flex-row mt-8">
           {/* text overlay and button */}
           <div id="banner-text" className="flex flex-col gap-8 w-80 md:w-1/2">
-            <div id="headline" className="relative">
+            <div id="headline" className="relative p-2">
               <h1
                 id="headline-text"
-                className="text-primaryDark text-4xl font-bold py-4 leading-10 z-20"
+                className="text-primaryDark text-2xl md:text-4xl font-bold py-2 md:py-4 leading-6 md:leading-10 z-20"
               >
                 {slides[currentSlide].headline}
               </h1>
@@ -60,13 +60,13 @@ function HeroCarousel(props) {
               ></div>
             </div>
             <div
-              id="hero-button"
-              className={`${slides[currentSlide].buttonText ? "" : "hidden"} `}
+              id="hero-button" 
+              className={`${slides[currentSlide].buttonText ? "" : "hidden"} p-2`}
             >
               {slides[currentSlide].buttonText && (
                 <a
                   href={slides[currentSlide].buttonUrl}
-                  className="px-8 py-3 md:py-5 text-primaryLight text-center text-base bg-primaryAccent rounded-full"
+                  className="px-4 md:px-8 py-3 md:py-5 text-primaryLight text-center text-base bg-primaryAccent rounded-full"
                 >
                   {slides[currentSlide].buttonText}
                 </a>

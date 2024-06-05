@@ -5,7 +5,7 @@ function IconCTA(props) {
   const { title, desc, icon, url, label } = props;
 
   return (
-    <div className="bg-primaryLight flex flex-col items-center p-2">
+    <div className="bg-primaryLight flex flex-col items-center p-2 shadow-2xl shadow-black">
       <div className="flex bg-primaryAccent h-20 w-20 rounded-full mt-10 items-center justify-center">
         <i
           className={`text-primaryLight fa fa-2xl ${icon}`}

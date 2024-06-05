@@ -17,6 +17,7 @@ module.exports = {
         secondaryLight: '#F87171',
         primaryDark: '#002072',
         secondaryDark: '#747474',
+        tertiaryDark: '#047abc',
         primaryAccent: '#0039a6',
         secondaryAccent: '#ff5a00',
         tertiaryAccent: 'hsl(192, 100%, 45%, .7)',
