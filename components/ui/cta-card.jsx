@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function CardCTA(props) {
+function CTACard(props) {
   const { imageUrl, title, description, linkUrl } = props;
   const [showOverlay, setShowOverlay] = useState(true);
 
@@ -54,4 +54,4 @@ function CardCTA(props) {
   );
 }
 
-export default CardCTA;
+export default CTACard;

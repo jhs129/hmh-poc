@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 import PracticeCard from "@/components/ui/practice-card";
 import CardContainer from "@/components/ui/card-container";
 import IconCTA from "@/components/ui/icon-cta2";
-import CardCTA from "@/components/ui/card-cta";
+import CTACard from "@/components/ui/cta-card";
 
 export default function Home() {
   return (
@@ -62,26 +62,26 @@ export default function Home() {
             </p>
           </div>
           <CardContainer>
-            <CardCTA
+            <CTACard
               title="Discover the JTCC Difference"
               imageUrl="/images/practices/jtcc-difference.png"
               description="Recognized by US News and World Report as a premier cancer center in New Jersey, John Theurer Cancer Center provides highly specialized, innovative cancer care close to home"
               linkUrl="https://www.hackensackmeridianhealth.org/en/services/cancer-care/why-choose-hmh-cancer-care"
             />
 
-            <CardCTA
+            <CTACard
               title="Cancer Support Services"
               imageUrl="/images/practices/our-cancer-research.png"
               description="You will  have access to the many comprehensive services we have available from diagnosis through treatment and after care. Whether ne-on-one, through a class or program, or in a support group setting, we are here for all your needs."
               linkUrl="https://www.hackensackmeridianhealth.org/en/services/cancer-care/why-choose-hmh-cancer-care"
             />
-            <CardCTA
+            <CTACard
               title="Our Cancer Research"
               imageUrl="/images/practices/cancer-support-services.png"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo."
               linkUrl="https://www.hackensackmeridianhealth.org/en/services/cancer-care/why-choose-hmh-cancer-care"
             />
-            <CardCTA
+            <CTACard
               title="Clincal & Research Hightlights"
               imageUrl="/images/practices/research-highlights.png"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo."

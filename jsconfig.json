@@ -2,7 +2,8 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
-      "@/components/ui/component-card": ["./components/ui/component-card.jsx"]
+      "@/components/ui/component-card": ["./components/ui/component-card.jsx"],
+      "@/components/ui/card-cta": ["./components/ui/card-cta.jsx"]
     }
   }
 }

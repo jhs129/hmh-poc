@@ -83,7 +83,7 @@ Builder.registerComponent(
 Builder.registerComponent(
   dynamic(() => import("./components/ui/icon-cta")),
   {
-    name: "Icon CTA",
+    name: "IconCTA",
     inputs: [
       { name: "title", type: "string" },
       {
@@ -114,7 +114,7 @@ Builder.registerComponent(
 Builder.registerComponent(
   dynamic(() => import("./components/ui/icon-cta2")),
   {
-    name: "Icon CTA 2",
+    name: "IconCTA2",
     inputs: [
       { name: "title", type: "string" },
       {
@@ -142,9 +142,9 @@ Builder.registerComponent(
 //  const { title, desc, icon, url, label } = props;
 //const { imageUrl, title, description, linkUrl } = props;
 Builder.registerComponent(
-  dynamic(() => import("./components/ui/card-cta")),
+  dynamic(() => import("./components/ui/cta-card")),
   {
-    name: "Card CTA",
+    name: "CTACard",
     inputs: [
       {
         name: "imageUrl",
@@ -174,22 +174,22 @@ Builder.registerComponent(
   }
 );
 
-// Builder.registerComponent(
-//   withChildren(dynamic(() => import("./components/ui/card-section"))),
-//   {
-//     name: "Card Section",
-//     childRequirements: {
-//       message: "You can only put in Card components",
-//       query: {
-//         "component.name": { $in: ["Practice Card"] },
-//       },
-//     },
-//     inputs: [
-//       {
-//         name: "headline",
-//         type: "text",
-//         defaultValue: "[Default Headline]",
-//       },
-//     ],
-//   }
-// );
+Builder.registerComponent(
+  withChildren(dynamic(() => import("./components/ui/card-container"))),
+  {
+    name: "Card Container",
+    childRequirements: {
+      message: "You can only put in Card components",
+      query: {
+        "component.name": { $in: ["CTACard", "IconCTA2", "IconCTA"] },
+      },
+    },
+    inputs: [
+      {
+        name: "headline",
+        type: "text",
+        defaultValue: "[Default Headline]",
+      },
+    ],
+  }
+);
